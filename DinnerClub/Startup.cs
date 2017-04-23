@@ -32,7 +32,9 @@ namespace DinnerClub
             // Add framework services.
             services.AddMvc();
 
-            services.AddDbContext<Context>(opt => opt.UseSqlite("Filename=dinnerClub.db"));
+            //services.Configure(opt => opt.UsePathBase(Microsoft.AspNetCore.Http.PathString.FromUriComponent("/api/")));
+
+            services.AddDbContext<Context>(opt => opt.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DinnerClub;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));//.UseSqlite("Filename=dinnerClub.db"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

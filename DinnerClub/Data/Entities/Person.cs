@@ -5,17 +5,15 @@ using System.Threading.Tasks;
 
 namespace DinnerClub.Data.Entities
 {
-    public class Person
+    public class Person : EntityBase
     {
-        public Guid ID { get; set; }
-
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
 
         public string Email { get; set; }
 
-        public ICollection<Person> Kids { get; set; }
+        public Family Family { get; set; }
 
         //Add Username so we can track stuff
     }

@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace DinnerClub.Data.Entities
 {
-    public class Restaurant
+    public class Restaurant : EntityBase
     {
-        public Guid ID { get; set; }
-
         public string Name { get; set; }
 
         public string Website { get; set; }

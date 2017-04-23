@@ -11,8 +11,17 @@ namespace DinnerClub.Data
     {
         //Run add-migration [nameOfMigration]
         //Run update-database
-        //install "SQLite / SQL Server Compact Toolbox" if I want to view the DB
+        public Context(DbContextOptions options)
+            : base(options)
+        {
 
+        }
+
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventAttendance> EventAttendance { get; set; }
+        public DbSet<Family> Families { get; set; }
         public DbSet<Person> People { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
+
     }
 }

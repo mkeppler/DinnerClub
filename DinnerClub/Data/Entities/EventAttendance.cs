@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace DinnerClub.Data.Entities
 {
-    public class EventResponse
+    public class EventAttendance : EntityBase
     {
-        public Guid ID { get; set; }
-
         public EventResponseEnum Response { get; set; }
 
         public Event Event { get; set; }
